@@ -1,0 +1,24 @@
+apiVersion: infinispan.org/v1 
+kind: Infinispan 
+metadata:
+  name: cache-services
+spec:
+  # Specifies the number of nodes in the cluster.
+  replicas: 1
+  service:
+    # Configures the service type as DataGrid.
+    type: DataGrid
+    container:
+      ephemeralStorage: true
+  logging:
+    categories:
+      org.infinispan: info
+      org.jgroups: info
+  expose:
+    type: Route
+  security:
+    endpointAuthentication: false
+    authorization:
+      enabled: false
+    endpointEncryption:
+      type: None  

@@ -1,0 +1,18 @@
+apiVersion: infinispan.org/v2alpha1
+kind: Cache
+metadata:
+  name: call-context
+spec:
+  clusterName: cache-services
+  name: call-context
+  template: >-
+    <infinispan>
+      <cache-container>
+        <replicated-cache name="call-context" mode="SYNC" statistics="true">
+          <memory>
+            <binary eviction="MEMORY" size="419430400"/> <!-- 400 MB -->
+          </memory>
+          <expiration lifespan="600000"/> <!-- 10 minutes -->
+        </replicated-cache>
+      </cache-container>
+    </infinispan>

@@ -1,0 +1,17 @@
+{
+  "name": "service-put",
+  "version": "1.0.0",
+  "description": "Sample service to store data in an infinispan",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Roman Martin Gil",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^0.27.1",
+    "express": "^4.17.3",
+    "infinispan": "^0.10.0"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "service-get",
+  "version": "1.0.0",
+  "description": "Sample service to get data from an infinispan cache",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "Roman Martin",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "express": "^4.17.3",
+    "infinispan": "^0.10.0"
+  }
+}
