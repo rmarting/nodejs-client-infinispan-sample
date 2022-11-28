@@ -10,8 +10,8 @@
   "author": "Roman Martin Gil",
   "license": "Apache-2.0",
   "dependencies": {
+    "@redhat/infinispan": "^0.10.1",
     "axios": "^0.27.1",
-    "express": "^4.17.3",
-    "infinispan": "^0.10.0"
+    "express": "^4.17.3"
   }
 }

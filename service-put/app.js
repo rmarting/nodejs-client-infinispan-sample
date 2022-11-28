@@ -1,4 +1,4 @@
-const infinispan = require('infinispan');
+const infinispan = require('@redhat/infinispan');
 const crypto = require('crypto');
 const axios = require('axios').default;
 const express = require('express')
@@ -31,11 +31,7 @@ function handleAccessControl(req, res) {
 
     const connected = infinispan.client(
         { host: 'cache-services', port: 11222 },
-        {
-            clientIntelligence: 'BASIC',
-            topologyUpdates: false,
-            cacheName: 'call-context'
-        });
+        { clientIntelligence: 'BASIC', topologyUpdates: false, cacheName: 'call-context' });
     
     connected.then(function (client) {
         console.log('Connected to `call-context` cache. Putting value for request');

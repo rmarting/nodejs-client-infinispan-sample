@@ -1,4 +1,4 @@
-const infinispan = require('infinispan');
+const infinispan = require('@redhat/infinispan');
 const express = require('express')
 const os = require('os')
 const app = express()
@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
     console.log("GET '/' Headers: " + JSON.stringify(req.headers));
 
     const connected = infinispan.client(
-        { host: 'cache-services', port: 11222 }, 
+        { host: 'cache-services', port: 11222 },
         { clientIntelligence: 'BASIC', topologyUpdates: false, cacheName: 'call-context' });
     
     connected.then(function (client) {
