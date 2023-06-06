@@ -1,5 +1,10 @@
 # Hot Rod JS Client Sample
 
+![License](https://img.shields.io/github/license/rmarting/nodejs-client-infinispan-sample?style=plastic)
+![Main Lang](https://img.shields.io/github/languages/top/rmarting/nodejs-client-infinispan-sample)
+![Languages](https://img.shields.io/github/languages/count/rmarting/nodejs-client-infinispan-sample)
+![Last Commit](https://img.shields.io/github/last-commit/rmarting/nodejs-client-infinispan-sample)
+
 This repo includes a sample microservice application using a shared datagrid to store some data.
 
 The microservice application design is:
